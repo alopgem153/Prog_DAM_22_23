@@ -17,6 +17,7 @@ public class calculos {
 
         int restoDiv = operador1 % operador2;
 
+        operador1;
 
     }
     
