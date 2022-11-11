@@ -36,7 +36,7 @@ public class Factura {
         System.out.printf("%-10s - esto es una cadena \n ", cadena);
 
         System.out.println("4 \\ 2 = 2");
-        System.out.println("Tu nombre es \"PEPE\" ");
+        System.out.println("Tu nombre es \"JUAN\" ");
 
     }
 }
