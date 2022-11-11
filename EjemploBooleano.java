@@ -18,9 +18,9 @@ public class EjemploBooleano {
 
         System.out.println("El resultado de: operador1 || (operador1 && operador2 = " + resultado );
         
-        System.out.println("DESDE HITHUB );
+        System.out.println("DESDE HITHUB" );
                            
-        System.out.println("OTRA LINEA );
+        System.out.println("OTRA LINEA" );
         
 
 
