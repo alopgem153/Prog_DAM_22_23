@@ -13,7 +13,7 @@ public class MayoriaEdad {
 
         boolean esMayorEdad = (edad >= MAYORIA_EDAD);
 
-        System.out.println("¿eL USUARIO ES mayor de edad? " + esMayorEdad);
+        System.out.println("¿El usuario ES mayor de edad? " + esMayorEdad);
 
         sc.close();
     }
