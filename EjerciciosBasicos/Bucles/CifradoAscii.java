@@ -23,6 +23,8 @@ public class CifradoAscii {
         System.out.println("Dime el factor de cifrado...");
         int factor = sc.nextInt();
 
+        
+
 
         //Dividimos la frase en palabras
 
