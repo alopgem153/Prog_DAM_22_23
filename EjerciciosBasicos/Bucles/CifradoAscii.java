@@ -12,30 +12,62 @@ public class CifradoAscii {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Que palabra quieres cifrar");
-        String palabra = sc.nextLine().toUpperCase();
+        //VARIABLES DE TODO EL PROGRAMA
+        String fraseCifrada = "";
+
+
+        //lECTURA DE INFORMACIÓN
+        System.out.println("Que frase quieres cifrar");
+        String frase = sc.nextLine().toUpperCase();
 
         System.out.println("Dime el factor de cifrado...");
         int factor = sc.nextInt();
 
-        for(int apuntador = 0; apuntador <= palabra.length()-1; apuntador++)
+
+        //Dividimos la frase en palabras
+
+        String[] palabras = frase.split(" ");
+
+        //Recorro todas las palabras de la frase
+        for(int numeroPalabra = 0; numeroPalabra <= palabras.length-1; numeroPalabra++)
         {
-            char caracterLeido = palabra.charAt(apuntador);
+            String palabra = palabras[numeroPalabra];
 
-            int numeroNuevoCaracter = (int)caracterLeido + factor;
+            String palabraCifrada = "";
 
-            //Veo si estoy en el rango de 65 a 90 (ABC....XYZ)
-            if(numeroNuevoCaracter > 90)
+            //Recorro una Palabra y la cifro
+            for(int apuntador = 0; apuntador <= palabra.length()-1; apuntador++)
             {
-                //tengo que empezar desde A cuando llega a Z
-                numeroNuevoCaracter = ((numeroNuevoCaracter - 65) % 25) + 64;
-            
-            } 
+                char caracterLeido = palabra.charAt(apuntador);
 
-            char nuevoCaracter = (char)numeroNuevoCaracter;
+                int numeroNuevoCaracter = (int)caracterLeido + factor;
 
-            System.out.println("Caracter: " + caracterLeido + " --- " + nuevoCaracter + "(" + numeroNuevoCaracter + ")");
-        }
+                //Veo si estoy en el rango de 65 a 90 (ABC....XYZ)
+                if(numeroNuevoCaracter > 90)
+                {
+                    //tengo que empezar desde A cuando llega a Z
+                    numeroNuevoCaracter = ((numeroNuevoCaracter - 65) % 25) + 64;
+                
+                } 
+
+                char nuevoCaracter = (char)numeroNuevoCaracter;
+
+                palabraCifrada += nuevoCaracter +"";
+
+                //System.out.println("Caracter: " + caracterLeido + " --- " + nuevoCaracter + "(" + numeroNuevoCaracter + ")");
+            }
+
+            palabraCifrada = factor + palabraCifrada;
+
+            fraseCifrada += palabraCifrada + " ";
+
+            //System.out.println("------------------");
+            //System.out.println("La palabra cifrada es: " + fraseCifrada);
+
+        } //END FOR palabras[]
+
+        //Devolver resultado
+        System.out.println("La frase cifrada completamente es: " + fraseCifrada);
 
     }
     
