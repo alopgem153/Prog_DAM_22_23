@@ -1,7 +1,10 @@
 package Funciones;
 
+import java.util.Scanner;
+
 public class EjemploFunciones {
     
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         
@@ -12,7 +15,7 @@ public class EjemploFunciones {
         //     System.out.println("HOLA");
         // }
         imprimir5Veces();
-
+            
         System.out.println("en mitad");
 
         // for(int i=0; i<5; i++)
@@ -51,6 +54,7 @@ public class EjemploFunciones {
 
     static void imprimir5Veces()
     {
+        
         for(int i=0; i<5; i++)
         {
             //System.out.println("HOLA");

@@ -39,7 +39,9 @@ public class MenuFuncionesBasicas {
                     System.out.println("Dime un numero");
                     operador1 = sc.nextInt();
                     boolean esPrimo = MathAlfonso.esPrimo(operador1);
-
+                    break;
+                case "C":
+                    MathAlfonso.posicionDeDigito(563654657, 7);
             }
 
         }  while (!salir);
