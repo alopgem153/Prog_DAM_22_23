@@ -77,7 +77,7 @@ public class MathAlfonso {
         }
         else 
         {
-            for(int aux = 1; aux <= exponente; aux++)
+            for(int aux = 1; aux < exponente; aux++)
             {
                 resultado = resultado * base;
             }   
@@ -95,12 +95,20 @@ public class MathAlfonso {
     static int digitos(int numero)
     {
         int contador = 0;
-        while(numero > 0)
-        {
-            contador++;
-            numero = numero / 10;
-        }
 
+        //Controlo que el numero 0 tiene 1 digito
+        if (numero == 0)
+        {
+            contador = 1;
+        }
+        else 
+        {
+            while(numero > 0)
+            {
+                contador++;
+                numero = numero / 10;
+            }
+        }
         return contador;
     }
 
@@ -116,7 +124,25 @@ public class MathAlfonso {
 
         while(numeroCalculos > 0)
         {
-            int resto = numeroAlReves % 10;
+            int resto = numeroCalculos % 10;
+            numeroCalculos  = numeroCalculos / 10;
+
+            numeroAlReves = (numeroAlReves * 10) + resto;
+
+
+        }
+
+        return numeroAlReves;
+    }
+
+    static long voltea(long numero)
+    {
+        long numeroAlReves = 0;
+        long numeroCalculos = numero;
+
+        while(numeroCalculos > 0)
+        {
+            int resto = (int)(numeroCalculos % 10);
             numeroCalculos  = numeroCalculos / 10;
 
             numeroAlReves = (numeroAlReves * 10) + resto;
@@ -255,6 +281,36 @@ public class MathAlfonso {
         return numeroNuevo;
     }
 
+    static long juntaNumeros(long numero1, long numero2)
+    {
+        //Para juntar 2 numeros multiplico el 1º por
+        // la potencia de 10 elevada al numero de dígitos del 2º
+        // Al resultado le sumo el 2º
+        // 57 y 231
+        // 57 * 10 ³ = 57000 
+        // 57000 + 231 = 57231
+        long numeroNuevo = numero1 * (potencia(10, digitos((int)numero2)));
+        numeroNuevo += numero2;
+
+        return numeroNuevo;
+    }
+
+    static long juntaNumeros(long numero1, int numero2)
+    {
+        //Para juntar 2 numeros multiplico el 1º por
+        // la potencia de 10 elevada al numero de dígitos del 2º
+        // Al resultado le sumo el 2º
+        // 57 y 231
+        // 57 * 10 ³ = 57000 
+        // 57000 + 231 = 57231
+        long numeroNuevo = numero1 * (potencia(10, digitos(numero2)));
+        numeroNuevo += numero2;
+
+        return numeroNuevo;
+    }
+
+
+
     /**
      * Añade un dígito a un número por detrás.
      * @param numero1
@@ -265,6 +321,16 @@ public class MathAlfonso {
     {
         return juntaNumeros(numero1, numero2);
 
+    }
+
+    static long pegaPorDetras(long numero1, int numero2)
+    {
+        return juntaNumeros(numero1, numero2);
+    }
+
+    static long pegaPorDetras(long numero1, long numero2)
+    {
+        return juntaNumeros(numero1, numero2);
     }
 
     /**
