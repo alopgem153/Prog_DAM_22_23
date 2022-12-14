@@ -1,5 +1,6 @@
 package ArraysT5;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EjemploArraySimple {
@@ -103,11 +104,13 @@ public class EjemploArraySimple {
 
     static void imprimir(String[] tabla)
     {
-        int indice = 0;
-        for (String nombre : tabla) {
-            System.out.println(" [" + indice + "] -> " + nombre );
-            indice++;
-        }
+        // int indice = 0;
+        // for (String nombre : tabla) {
+        //     System.out.println(" [" + indice + "] -> " + nombre );
+        //     indice++;
+        // }
+
+        System.out.println(Arrays.toString(tabla));
     }
 
     /**
@@ -138,9 +141,13 @@ public class EjemploArraySimple {
      */
     static void llenar(String[] tabla)
     {
-        for (int i = 0; i < tabla.length; i++) {
-            tabla [i] = "Posicion " + i;
-        }
+        // for (int i = 0; i < tabla.length; i++) {
+        //     tabla [i] = "Posicion " + i;
+        // }
+
+        Arrays.fill(tabla, "Nombre");
+
+        Arrays.fill(tabla, 5,8, "PEPE");
     }
 
 
