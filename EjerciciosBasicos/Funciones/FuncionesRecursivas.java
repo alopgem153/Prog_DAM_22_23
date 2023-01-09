@@ -84,7 +84,7 @@ public class FuncionesRecursivas {
 
         if (numero == 0) //caso base numero 0
         {
-            resultado =  palabras[numero];;
+            resultado =  palabras[numero];
         }
         else 
         {

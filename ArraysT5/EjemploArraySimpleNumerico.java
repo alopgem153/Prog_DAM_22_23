@@ -23,6 +23,10 @@ public class EjemploArraySimpleNumerico {
             {
                 case 1:
                     limpiarArray(numeros);
+                    numeros = limpiar();
+
+                    
+
                     break;
                 case 2:
                     sc.nextLine(); //limpio buffer
@@ -82,6 +86,11 @@ public class EjemploArraySimpleNumerico {
                     System.out.println("Opción no Valida");
                     break;
 
+            }
+            if (numeros == null)
+            {
+                System.out.println("Array NULO");
+                
             }
 
         }while(!salir);
@@ -374,6 +383,17 @@ public class EjemploArraySimpleNumerico {
 
         
 
+    }
+
+    
+    static int[] limpiar()
+    {
+        int[] copia = null;
+
+
+      
+
+        return copia;
     }
 
 
