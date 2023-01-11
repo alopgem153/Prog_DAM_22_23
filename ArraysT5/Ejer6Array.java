@@ -42,7 +42,7 @@ public class Ejer6Array {
             {
                 array[i+1] = copia[i];    
             }
-            else //el ultimo elemento pasa a la posicion 0
+            else //el último elemento pasa a la posicion 0
             {
                 array[0] = copia[i];
             }

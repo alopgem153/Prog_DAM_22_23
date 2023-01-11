@@ -31,7 +31,7 @@ public class MathAlfonso {
      * @param numero
      * @return
      */
-    static boolean esPrimo(int numero)
+    public static boolean esPrimo(int numero)
     {
         boolean resultado = true;
 

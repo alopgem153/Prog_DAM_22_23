@@ -311,5 +311,17 @@ public class UtilesArrayAlfonso {
     // elementosIguales(int[]array1,  int[] array2, int posicionAComparar) //devuelve true si el elemento
     //    en ambos arrays son iguales
 
+
+    static int[] concatenarArrays(int[] array1, int[] array2)
+    {
+        int[] arrayCompleto = array1;
+
+        for (int i = 0; i < array2.length; i++) 
+        {
+            arrayCompleto = insertarAlFinal(arrayCompleto, array2[i]);    
+        }
+
+        return arrayCompleto;
+    }
    
 }
