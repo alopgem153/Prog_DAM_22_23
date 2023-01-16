@@ -17,7 +17,7 @@ public class Bidimensional1 {
         }
 
 
-        //imprimir tabla
+        //imprimir tabla por filas
         for (int i = 0; i < tabla.length; i++) {
             int[] filaArray = tabla[i];
             for (int j = 0; j < filaArray.length; j++) {
@@ -26,5 +26,20 @@ public class Bidimensional1 {
             System.out.println();
             
         }
+
+        System.out.println();
+
+
+        //imprimir por Columnas
+        for (int columna = 0; columna < tabla[0].length; columna++) 
+        {
+            //hago un bucle por el número de columnas que tiene la tabla    
+            for (int fila = 0; fila < tabla.length; fila++) 
+            {
+                System.out.print(tabla[fila][columna] + " ");    
+            }
+            System.out.println();
+        }
+
     }
 }
