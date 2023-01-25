@@ -1,6 +1,7 @@
 package ArraysT5;
 
 import java.util.Arrays;
+import ejercicio
 
 public class Bidimensional3 {
 
