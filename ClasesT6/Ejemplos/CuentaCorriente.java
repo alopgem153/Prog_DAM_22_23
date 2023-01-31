@@ -13,6 +13,10 @@ public class CuentaCorriente {
     //saldo no es visible para otras clases
     private double saldo;
 
+    //Gestor encargado de la cuenta
+    private Gestor gestor;
+
+
     //Constructores
     public CuentaCorriente(String dni, String nombre)
     {
@@ -34,8 +38,23 @@ public class CuentaCorriente {
         this.nombreTitular = nombre;
     }
 
-    private void sacarDinero(double cantidad, String dni)
+    public CuentaCorriente(String dni, String nombre, double saldo, Gestor gestor)
     {
+        this(dni, nombre, saldo);
+        this.gestor = gestor;
+    }
+
+    public CuentaCorriente(String dni, String nombre, double saldo, String nombreGestor, String tlfGestor)
+    {
+        this(dni, nombre, saldo);
+     
+        Gestor gestor = new Gestor(nombreGestor, tlfGestor);
+        this.gestor = gestor;
+    }
+
+    public void sacarDinero(double cantidad, String dni)
+    {
+        
         if (this.dni.equalsIgnoreCase(dni))
         {
             sacarDinero(cantidad);
@@ -47,7 +66,7 @@ public class CuentaCorriente {
     }
 
     //Metodos o funciones
-    public void sacarDinero(double cantidad)
+    private void sacarDinero(double cantidad)
     {
         if (this.saldo > cantidad)
         {
@@ -77,6 +96,37 @@ public class CuentaCorriente {
     public void mostrarInformacion()
     {
         System.out.println("Titular: "+ this.nombreTitular + "(" + this.dni + ") --- Saldo= " + this.saldo);
+    }
+
+    public double ObtenerSaldo()
+    {
+        return saldo;
+    }
+
+    public void IngresarSaldo(double cantidad)
+    {
+        this.saldo += cantidad;
+    }
+
+    public Gestor getGestor() {
+        return gestor;
+    }
+
+    public void setGestor(Gestor gestor) {
+        this.gestor = gestor;
+    }
+
+    public String obtenerNombreGestor()
+    {
+        String nombreGestor = "Sin asignar";
+
+        //Si existe un gestor y ese gestor tiene nombre entonces cojo su valor
+        if (this.gestor != null && this.gestor.getNombre() != null)
+        {
+            nombreGestor = this.gestor.getNombre();
+        }
+
+        return nombreGestor;
     }
     
 }
