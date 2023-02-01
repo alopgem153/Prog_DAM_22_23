@@ -1,5 +1,8 @@
 package ClasesT6.Ejemplos;
 
+import ClasesT6.Ejemplos.Gestor.Puesto;
+import ClasesT6.Ejemplos.Gestor.Sexo;
+
 public class UsoDeClases {
     
     public static void main(String[] args) {
@@ -45,6 +48,19 @@ public class UsoDeClases {
 
         System.out.println("Gestor de PEPE: "+  cc_Pepe.obtenerNombreGestor());
         System.out.println("Gestor de Laura: "+  cc_Pepe.obtenerNombreGestor());
+
+        gestor1.setQueSoy(Sexo.NoBinario);
+
+        System.out.println(gestor1.getQueSoy());
+
+        Gestor gestor2 = new Gestor("Adolfo", "666-1234", 40000, Sexo.Mujer, Puesto.Ayudante );
+        cc_Maria.setGestor(gestor2);
+        gestor2.setImporteMaximo(100000);
+        System.out.print("Gestor de Maria: ");
+        cc_Maria.getGestor().imprimirInfoGestor();
+
+        System.out.println("------------------------------------------");
+
 
     }
 }

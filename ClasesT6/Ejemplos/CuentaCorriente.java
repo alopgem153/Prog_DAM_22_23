@@ -20,12 +20,14 @@ public class CuentaCorriente {
     //Constructores
     public CuentaCorriente(String dni, String nombre)
     {
-        this.dni = dni;
-        this.nombreTitular = nombre;
+        this(dni, nombre, 0);
+        //this.dni = dni;
+        //this.nombreTitular = nombre;
     }
 
     public CuentaCorriente(String dni, double saldo)
     {
+        
         this.dni = dni;
         this.saldo = saldo;
     }
