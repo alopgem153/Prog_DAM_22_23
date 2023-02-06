@@ -1,5 +1,7 @@
 package ClasesT6.Usos;
 
+import ClasesT6.Ejemplos.Terminal;
+
 public class UsoTerminalTelefonica {
     
     public static void main(String[] args) {
@@ -16,5 +18,7 @@ public class UsoTerminalTelefonica {
         System.out.println(t2);
         System.out.println(t3);
         System.out.println(t4);
+
+        
     }
 }
