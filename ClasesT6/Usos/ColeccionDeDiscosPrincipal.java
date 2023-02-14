@@ -1,5 +1,6 @@
 package ClasesT6.Usos;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 import javax.lang.model.util.ElementScanner6;
@@ -317,6 +318,8 @@ public class ColeccionDeDiscosPrincipal {
       {
         System.out.println(disco);
       }  
+
+      LocalDate fecha = LocalDate.of(2023, 2, 10);
     }
   }
 
