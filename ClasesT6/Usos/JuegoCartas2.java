@@ -52,7 +52,7 @@ public class JuegoCartas2 {
                     //la carta 2 es mayor por lo que la guardo en la cartasacada1 y vuelvo a sacar una carta
                     cartaSacada1 = cartaSacada2;
                 }
-            }
+            }  //end while
 
             System.out.println("¿Quiere jugar otra vez? (0 para salir)");
             int opcion = sc.nextInt();
