@@ -9,8 +9,7 @@ public class UsoInstrumento {
     
         Notas[] cancion = { Notas.DO, Notas.LA, Notas.DO, Notas.LA, Notas.DO, Notas.LA, Notas.SOL };
         
-        //Creo el instrumento : Piano
-        Piano piano = new Piano();
+        //Creo el instrumento : Pianoadd
 
         //Introduzco las notas de la canción en el piano
         for (Notas notas : cancion) {

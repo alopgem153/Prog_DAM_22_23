@@ -1,10 +1,10 @@
-package Prog_DAM_22.ClasesT6.Ejemplos;
+package ClasesT6.Ejemplos;
 
 public class Terminal {
     
     //Atributos de la clase
     String numero;
-    int tiempoConversacion;
+    protected int tiempoConversacion;
 
     //Constructores
     public Terminal(String numero)
