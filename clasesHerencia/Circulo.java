@@ -32,5 +32,14 @@ public class Circulo extends FiguraGeometica {
 
         return cadena;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        
+        Circulo circulo = (Circulo)obj;
+
+        //return this.radio == circulo.radio && this.color.equalsIgnoreCase(circulo.color); 
+        return this.radio == circulo.radio && super.equals(obj);
+    }
     
 }

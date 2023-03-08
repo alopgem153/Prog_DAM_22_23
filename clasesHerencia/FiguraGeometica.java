@@ -22,6 +22,12 @@ public abstract class FiguraGeometica {
 
         return cadena;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        FiguraGeometica fig = (FiguraGeometica)obj;
+        return fig.color.equalsIgnoreCase(this.color);
+    }
     
     
 }
