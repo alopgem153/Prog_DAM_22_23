@@ -10,7 +10,7 @@ public class usoFigura {
         coleccion[1] = new Triangulo(6,7.8,"Azul");
         coleccion[2] = new Cuadrado(5,"Amarillo");
         coleccion[3] = new Circulo(2.2,"Marrón");
-       
+
        System.out.println(coleccion[0].color );
        
         for (FiguraGeometica tri: coleccion) {
