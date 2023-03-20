@@ -1,6 +1,6 @@
 package interfaces.negocio_ejemplo;
 
-public class Cliente implements Comparable {
+public class Cliente implements Comparable<Cliente> {
     
     //Atributos
     private String nombre;
@@ -44,10 +44,10 @@ public class Cliente implements Comparable {
     }
     
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Cliente c) {
 
         
-         Cliente c = (Cliente)o;
+         //Cliente c = (Cliente)o;
 
          //1º Opción
          //Ordenamos los clientes por dinero que se van a gastar

@@ -14,6 +14,13 @@ public class UsandoNegocio {
         Cliente c5 = new Cliente("Laura", 3, 15);
         Cliente c6 = new Cliente("Alfonso", 20, 45);
         
+
+        c1.compareTo(c6);
+
+        ClienteComparatorEdad comparadorEdad = new ClienteComparatorEdad();
+
+        comparadorEdad.compare(c2, c4);
+
         Ferreteria ferreteriaGonzalez = new Ferreteria("FERRETERIA_GONZALEZ");
 
         ferreteriaGonzalez.abrir();
