@@ -1,6 +1,6 @@
 package contenedores;
 
-public class Persona {
+public class Persona implements Comparable<Persona> {
 
     String nombre;
     int edad;
@@ -16,6 +16,17 @@ public class Persona {
     }
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        
+        return this.nombre + "(" + this.edad + ")";
+    }
+    @Override
+    public int compareTo(Persona p) {
+        //Ordeno por nombre únicamente
+        return this.nombre.compareTo(p.nombre);
     }
     
 }

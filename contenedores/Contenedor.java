@@ -2,7 +2,7 @@ package contenedores;
 
 import java.util.Arrays;
 
-public class Contenedor<T> {
+public class Contenedor<T extends Comparable<T> > {
 
     private T[] tabla;
 
@@ -36,25 +36,37 @@ public class Contenedor<T> {
 
     }
 
-    public T extraerDelPrincipio()
+    public T extrsuperaerDelPrincipio()
     {
+        T element = tabla[0];
 
+        T [] newTabla = Arrays.copyOfRange(tabla, 1, tabla.length);
+
+        tabla = newTabla;
+
+        return element;
     }
 
     public T extraerDelFinal()
     {
+        T aux = tabla[tabla.length-1];
 
+        T[] copiaTabla = Arrays.copyOf(tabla, tabla.length-1);
+
+        tabla = copiaTabla;
+
+        return aux;
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
+        
+        return Arrays.toString(tabla); // [ , , , , ]
     }
 
     public void ordenar()
     {
-        
+        Arrays.sort(tabla);
     }
 
 
