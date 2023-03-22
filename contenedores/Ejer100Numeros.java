@@ -1,6 +1,7 @@
 package contenedores;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Ejer100Numeros {
 
@@ -31,12 +32,24 @@ public class Ejer100Numeros {
             }
          }
 
+         
          System.out.println("La lista ahora tiene: " + listaNumeros.size() + " elementos.");
          System.out.println(listaNumeros);
 
-         //Iterator
+         //CON Iterator
+         
+         Iterator<Integer> listaIterada =  listaNumeros.iterator();
+         while(listaIterada.hasNext())
+         {
+            Integer numero = listaIterada.next();
+            if(numero == 4)
+            {
+                listaIterada.remove();
+            }
+         }
 
-
+         System.out.println("La lista ahora tiene: " + listaNumeros.size() + " elementos.");
+         System.out.println(listaNumeros);
 
     }
     

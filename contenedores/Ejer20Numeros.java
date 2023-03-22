@@ -2,6 +2,7 @@ package contenedores;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class Ejer20Numeros {
@@ -44,6 +45,21 @@ public class Ejer20Numeros {
 
         System.out.println("Elementos Sin repetir: " + elementosSinRepetir);
         System.out.println("Elementos repetidos: " + elementosRepetidos);
+
+
+
+        //----------------------------------------------
+        //Utilizamos iterator con SET
+        Iterator<Integer> iteratorElementosRepetidos = elementosRepetidos.iterator();
+
+        while(iteratorElementosRepetidos.hasNext())
+        {
+            Integer numeroLeido = iteratorElementosRepetidos.next();
+            System.out.print(" Numero: " + numeroLeido);
+        }
+
+
+        elementosRepetidos.ad
 
 
     }
