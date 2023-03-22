@@ -1,6 +1,7 @@
 package interfaces.negocio_ejemplo;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class UsandoNegocio {
 
@@ -48,6 +49,8 @@ public class UsandoNegocio {
         //Arrays.sort(colaCliente,new ClienteComparatorEdad());
 
         System.out.println(Arrays.toString(colaCliente));
+
+        
 
         //ordenacion por el mayor dinero gastado a menor con un Comparator
 
