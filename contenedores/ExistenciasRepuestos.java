@@ -3,8 +3,6 @@ package contenedores;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner6;
-
 public class ExistenciasRepuestos {
 
     public static Scanner sc = new Scanner(System.in);
@@ -18,67 +16,67 @@ public class ExistenciasRepuestos {
         boolean salir = false;
         do 
         {
-        //Muestro el menu
-        int opcion = menu();
+            //Muestro el menu
+            int opcion = menu();
 
-        //Segun opcion llamo al metodo que sea
-        switch(opcion)
-        {
-            case 1:
-                System.out.println("Indique el codigo del nuevo producto");
-                String codigoProducto = sc.nextLine();
-                insertarProducto(existencias, codigoProducto);
-                // if (!existencias.containsKey(codigoProducto))
-                // {
-                //     existencias.put(codigoProducto, 0);
-                // }
-                // else {
-                //     System.out.println("Producto ya insertado");
-                // }
-                break;
+            //Segun opcion llamo al metodo que sea
+            switch(opcion)
+            {
+                case 1:
+                    System.out.println("Indique el codigo del nuevo producto");
+                    String codigoProducto = sc.nextLine();
+                    insertarProducto(existencias, codigoProducto);
+                    // if (!existencias.containsKey(codigoProducto))
+                    // {
+                    //     existencias.put(codigoProducto, 0);
+                    // }
+                    // else {
+                    //     System.out.println("Producto ya insertado");
+                    // }
+                    break;
 
-            case 2:
-            
-                System.out.println("Indique el codigo del producto a borrar");
-                codigoProducto = sc.nextLine();
-                borrarProducto(existencias, codigoProducto);
-                // if (existencias.containsKey(codigoProducto))
-                // {
-                //     existencias.remove(codigoProducto);
-                // }
-                // else {
-                //     System.out.println("Producto con código " + codigoProducto + " no encontrado");
-                // }
-                break;
+                case 2:
+                
+                    System.out.println("Indique el codigo del producto a borrar");
+                    codigoProducto = sc.nextLine();
+                    borrarProducto(existencias, codigoProducto);
+                    // if (existencias.containsKey(codigoProducto))
+                    // {
+                    //     existencias.remove(codigoProducto);
+                    // }
+                    // else {
+                    //     System.out.println("Producto con código " + codigoProducto + " no encontrado");
+                    // }
+                    break;
 
-               
+                
 
-            case 3:
-                System.out.println("Indique el codigo del producto al que desea cambiar el stock");
-                codigoProducto = sc.nextLine();
-                if (existencias.containsKey(codigoProducto))
-                {
-                    System.out.println("Indique la nueva cantidad");
-                    int nuevaCantidad = sc.nextInt();
-                    existencias.put(codigoProducto, nuevaCantidad);
-                }
-                else {
-                    System.out.println("Producto no existe");
-                }
-                break;
+                case 3:
+                    System.out.println("Indique el codigo del producto al que desea cambiar el stock");
+                    codigoProducto = sc.nextLine();
+                    if (existencias.containsKey(codigoProducto))
+                    {
+                        System.out.println("Indique la nueva cantidad");
+                        int nuevaCantidad = sc.nextInt();
+                        existencias.put(codigoProducto, nuevaCantidad);
+                    }
+                    else {
+                        System.out.println("Producto " + codigoProducto + " no existe");
+                    }
+                    break;
 
-            case 4:
-                System.out.println(existencias);
+                case 4:
+                    System.out.println(existencias);
 
-                break;
+                    break;
 
-            case 0:
-                salir = true;
-                break;
-            default:
-                System.out.println("opcion NO valida");
-                break;
-        }
+                case 0:
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("opcion NO valida");
+                    break;
+            }
 
         }while (!salir);
 
@@ -90,7 +88,7 @@ public class ExistenciasRepuestos {
         int opcion = -1;
         System.out.println("---- Tienda de repuestos ----");
         System.out.println("1- Insertar producto");
-        System.out.println("2- eliminar producto");
+        System.out.println("2- Eliminar producto");
         System.out.println("3- Cambiar stock producto");
         System.out.println("4- Mostrar productos");
         System.out.println("0- Salir");

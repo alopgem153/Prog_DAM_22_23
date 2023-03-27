@@ -48,6 +48,8 @@ public class EjemploDiccionario {
         ArrayList<Integer> listaClaves = new ArrayList<>();
         listaClaves.addAll(agenda.keySet());
 
+        
+
         System.out.println("Lista de Claves: " + listaClaves.toString());
 
         System.out.println("Lista de valores: " + agenda.values().toString());
