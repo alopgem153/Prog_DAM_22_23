@@ -23,6 +23,7 @@ public class AcademiaLengua {
 
         nuevoAcademico(academia, new Academico("No debe entrar", 2023), 'c'); //No debe netrar pq ya está ocupado el sillon 'c'
 
+
         //Listado de academicos ordenados por nombre sin letra
         ArrayList<Academico> listadoAcademicos = new ArrayList<>();
         listadoAcademicos.addAll(academia.values());
