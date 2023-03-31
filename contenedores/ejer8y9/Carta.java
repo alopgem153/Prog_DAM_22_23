@@ -4,14 +4,17 @@ public class Carta implements Comparable<Carta> {
 
     public enum Palo {BASTOS, COPAS, ESPADAS, ORO};
 
-    private String[] arrayValoresCarta  = {"as", "dos", "tres", "cuatro", "cinco", "seis", "siete", "sota", "caballo", "rey"};
+    //private String[] arrayValoresCarta  = {"as", "dos", "tres", "cuatro", "cinco", "seis", "siete", "sota", "caballo", "rey"};
+    //Cambio el array de valores de carta por un enumerado porque el enumerado me respeta el orden que tienen los valores dentro del el 
+    // y en el array el oden me lo da el tipo del array en este caso String por lo que el cinco de basto me lo ponía antes que el dos de bastos
+    private enum ValorCarta {as, dos, tres, cuatro, cinco, seis, siete, sota, caballo, rey };
 
-    private String numero;
+    private ValorCarta numero;
     private Palo palo;
 
     public Carta()
     {
-        this.numero = arrayValoresCarta[(int)(Math.random()*arrayValoresCarta.length)];
+        this.numero = ValorCarta.values()[(int)(Math.random()*ValorCarta.values().length)];  //arrayValoresCarta[(int)(Math.random()*arrayValoresCarta.length)];
         
         Palo[] palos =Palo.values();
 
@@ -22,11 +25,11 @@ public class Carta implements Comparable<Carta> {
         this.palo = Palo.values()[random];
     }
 
-    public String getNumero() {
+    public ValorCarta getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(ValorCarta numero) {
         this.numero = numero;
     }
 
@@ -41,7 +44,7 @@ public class Carta implements Comparable<Carta> {
     @Override
     public boolean equals(Object obj) {
         Carta carta = (Carta)obj;
-        return this.numero.equalsIgnoreCase(carta.getNumero()) &&  (this.palo == carta.getPalo());
+        return this.numero.equals(carta.getNumero()) &&  (this.palo == carta.getPalo());
     }
 
     @Override
@@ -56,7 +59,7 @@ public class Carta implements Comparable<Carta> {
             return this.numero.compareTo(o.getNumero());
         }
         else {
-            return this.palo.compareTo(o.getPalo());
+            return this.palo.compareTo(o.getPalo()); 
         }
     }
 
