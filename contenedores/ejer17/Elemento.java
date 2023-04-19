@@ -31,4 +31,23 @@ public class Elemento {
         return this.nombre + " PVC: " + this.precio + " Unidades: " + this.cantidad + " Subtotal:" + (this.precio*this.cantidad) ;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        //2 elementos son iguales si su nombre es igual entre ellos
+        Elemento elem = (Elemento)obj;
+        return this.nombre.equals(elem.getNombre());
+    }
+
+    @Override
+    public int hashCode() {
+        
+        return 0;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+
+    
 }

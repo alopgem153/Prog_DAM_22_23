@@ -45,7 +45,12 @@ public class AcademiaLengua {
             System.out.println("Letra: " + letra + " - " + academicoLeido.getNombre());
         }
 
-
+        for (int i = 0; i < listaLetras.size(); i++) 
+        {
+            Academico academico = academia.get(listaLetras.get(i)); 
+            System.out.println(" * " + listaLetras.get(i) + " -> "  + academico.toString());   
+        }
+       
         TreeMap<Character, Academico> arbolAcademia = new TreeMap<>(academia);
         System.out.println(arbolAcademia);
 

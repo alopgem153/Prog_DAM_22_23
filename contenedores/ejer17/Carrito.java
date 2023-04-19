@@ -1,19 +1,37 @@
 package contenedores.ejer17;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Carrito {
 
     HashSet<Elemento> bolsacompra;
+    //ArrayList<Elemento> bolsacompra;
 
     public Carrito()
     {
         bolsacompra = new HashSet<>();
+        //bolsacompra = new ArrayList<>();
     }
 
     public void agrega(Elemento elemento)
     {
-        bolsacompra.add(elemento);
+        //Si no está ya en la bolsa lo agrego 
+        if (!bolsacompra.contains(elemento))
+        {
+            bolsacompra.add(elemento);
+        }
+        else 
+        {
+            //Si ya está en la bolsa -> modifico la cantidad
+            for (Elemento elem : bolsacompra) 
+            {
+                if (elem.equals(elemento))
+                {
+                    elem.setCantidad(elem.getCantidad() + elemento.getCantidad());
+                }    
+            }
+        }
     }
 
     public int numeroDeElementos()
