@@ -1,0 +1,5 @@
+Este es un fichero de texto
+
+tiene varias lineas
+
+y esto es el final.
