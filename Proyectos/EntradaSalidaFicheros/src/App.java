@@ -11,8 +11,8 @@ public class App {
         
         try 
         {
-            //fr = new FileReader("src/recursos/fichero.txt"); 
-            fr = new FileReader("/home/alfonso/Escritorio/fichero2.txt"); 
+            fr = new FileReader("src/recursos/fichero.txt"); 
+            //fr = new FileReader("/home/alfonso/Escritorio/fichero2.txt"); 
 
 
             int caracterLeido = fr.read();
@@ -76,7 +76,52 @@ public class App {
         System.out.println("-- Suma de números---------------");
         // --- Trabajamos con BufferedReader ----------------
 
+        try
+        {
+            fr = new FileReader("src/recursos/ficheroNumeros.txt"); 
+            bufferReader = new BufferedReader(fr);
 
+            String lineaFichero = bufferReader.readLine();
+
+            int total = 0;
+            int numeroLinea = 1;
+            while(lineaFichero != null)
+            {
+                total = 0;
+                String[] lineaToceada = lineaFichero.split(" ");
+                try 
+                {
+                    for (String trozo : lineaToceada) {
+                        int numero = Integer.valueOf(trozo);
+                        total += numero;
+                    }
+                    System.out.println("Total linea " + numeroLinea + ": " + total);
+                }
+                catch(Exception ex)
+                {
+                    System.out.println("Linea " + numeroLinea + " vacia");
+                    total = 0;
+                }
+                finally
+                {
+                }
+                lineaFichero = bufferReader.readLine();
+                numeroLinea++;
+            }
+
+            System.out.println("Hemos llegado al final del fichero con bufferredREader");
+        }
+        catch(IOException ioExceptio)
+        {
+            System.out.println("BufferedReader: Fichero no encontrado");
+        }
+        finally
+        {
+            if (bufferReader != null)
+            {
+                bufferReader.close();
+            }
+        }
 
         
 

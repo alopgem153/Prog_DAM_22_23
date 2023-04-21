@@ -13,6 +13,7 @@ public class Ejer20Numeros {
         
         ArrayList<Integer> listaNumeros = new ArrayList<Integer>();
 
+        HashSet<Integer> conjuntoSinRepetidos = new HashSet<Integer>();
         TreeSet<Integer> elementosSinRepetir = new TreeSet<Integer>();
         TreeSet<Integer> elementosRepetidos = new TreeSet<Integer>();
        
@@ -24,6 +25,10 @@ public class Ejer20Numeros {
         }
 
         System.out.println(listaNumeros);
+
+        //al insertar la lista de números en un conjunto elimino las repeticiones
+        conjuntoSinRepetidos.addAll(listaNumeros);
+        System.out.println("Elementos sin repetidos: " + conjuntoSinRepetidos);
 
         //En elementosSinRepetir guardo los elementos que solo están 1 vez en listanumeros
         // y en elementosRepetidos los numeros que están repetidos en listanumeros
@@ -43,6 +48,7 @@ public class Ejer20Numeros {
 
         }
 
+
         System.out.println("Elementos Sin repetir: " + elementosSinRepetir);
         System.out.println("Elementos repetidos: " + elementosRepetidos);
 
@@ -59,8 +65,7 @@ public class Ejer20Numeros {
         }
 
 
-        elementosRepetidos.ad
-
+        
 
     }
     
