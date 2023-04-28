@@ -1,0 +1,9 @@
+2023-04-25T13:22:49.248813 - INFORMACION - Se ha leido fichero.txt 
+2023-04-25T13:22:59.498459 - INFORMACION - FINAL programa
+2023-04-25T13:24:13.136539 - INFORMACION - Se ha leido fichero.txt 
+2023-04-25T13:24:13.146633 - ERROR - src/recursos/ficheroNumerosxx.txt (No existe el archivo o el directorio)
+2023-04-25T13:24:19.827408 - INFORMACION - FINAL programa
+2023-04-25T13:26:07.957175 - INFORMACION - Se ha leido fichero.txt 
+2023-04-25T13:26:07.974239 - ERROR - src/recursos/ficheroNumerosxx.txt (No existe el archivo o el directorio)
+2023-04-25T13:26:07.974522 - ERROR - java.io.FileNotFoundException: src/recursos/ficheroNumerosxx.txt (No existe el archivo o el directorio)
+2023-04-25T13:26:10.63052 - INFORMACION - FINAL programa

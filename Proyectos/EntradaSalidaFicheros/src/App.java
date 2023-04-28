@@ -8,8 +8,12 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Locale;
 import java.util.Scanner;
+
+import clases.LogPropio;
+import clases.LogPropio.TipoMensaje;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -31,10 +35,12 @@ public class App {
             }
 
             System.out.println("Hemos llegado al final del fichero");
+            LogPropio.NuevaEntradaALog("Se ha leido fichero.txt ", TipoMensaje.INFORMACION);
         }
         catch(IOException ioexception)
         {
             System.out.println("Fichero no encontrado");
+            LogPropio.NuevaEntradaALog("fichero no encontrado ", TipoMensaje.ERROR);
         }
         finally
         {
@@ -88,7 +94,7 @@ public class App {
 
         try
         {
-            fr = new FileReader("src/recursos/ficheroNumeros.txt"); 
+            fr = new FileReader("src/recursos/ficheroNumerosxx.txt"); 
             bufferReader = new BufferedReader(fr);
 
             String lineaFichero = bufferReader.readLine();
@@ -124,6 +130,8 @@ public class App {
         catch(IOException ioExceptio)
         {
             System.out.println("BufferedReader: Fichero no encontrado");
+            LogPropio.NuevaEntradaALog(ioExceptio.getMessage(), TipoMensaje.ERROR);
+            LogPropio.NuevaEntradaALog(ioExceptio.toString(), TipoMensaje.ERROR);
         }
         finally
         {
@@ -293,6 +301,10 @@ public class App {
 
         EscrituraEnFichero();
 
+        LogPropio.NuevaEntradaALog("FINAL programa", TipoMensaje.INFORMACION);
+
+
+
     }
 
 
@@ -340,6 +352,8 @@ public class App {
             }catch(IOException ioException)
             {
                 System.out.println(ioException);
+                
+                LogPropio.NuevaEntradaALog(ioException.getLocalizedMessage(), TipoMensaje.ERROR);
                 
             }
         }
