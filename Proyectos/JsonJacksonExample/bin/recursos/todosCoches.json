@@ -1,0 +1,21 @@
+[ {
+  "marca" : "Ferary",
+  "modelo" : "Testarrosa",
+  "anioFabricacion" : 1986,
+  "precio" : 250000.0
+}, {
+  "marca" : "Audi",
+  "modelo" : "Q5",
+  "anioFabricacion" : 2022,
+  "precio" : 50000.0
+}, {
+  "marca" : "BMW",
+  "modelo" : "550",
+  "anioFabricacion" : 2003,
+  "precio" : 25000.0
+}, {
+  "marca" : "Renault",
+  "modelo" : "Megane",
+  "anioFabricacion" : 2019,
+  "precio" : 15000.0
+} ]
