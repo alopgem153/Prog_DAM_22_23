@@ -1,0 +1,17 @@
+Lijadora -> 2
+Tornillo -> 20
+Pintura -> 2
+Cuerda -> 0
+Broca del 15 -> 0
+Taladro -> 1
+Martillo -> 2
+Caja de herramientas -> 0
+Sierra manual -> 0
+Cepillo eléctrico -> 1
+Destornillador -> 2
+Clavo -> 4
+Llave inglesa -> 1
+Sierra circular -> 1
+Serrucho -> 7
+Herramienta multiusos -> 3
+Cinta métrica -> 1

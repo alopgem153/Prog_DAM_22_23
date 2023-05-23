@@ -6,7 +6,8 @@ public class Persona2 {
 
     @JsonProperty("firstName")
     private String nombre;
-    private String lastName;
+    @JsonProperty("lastName")
+    private String apellido;
     private String gender;
     private Integer age;
     private String number;
@@ -16,6 +17,7 @@ public class Persona2 {
 
     }
 
+    
     public String getNombre() {
         return nombre;
     }
@@ -24,12 +26,12 @@ public class Persona2 {
         this.nombre = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setApellido(String lastName) {
+        this.apellido = lastName;
     }
 
     public String getGender() {
@@ -58,7 +60,7 @@ public class Persona2 {
 
     @Override
     public String toString() {
-        return "Persona [firstName=" + nombre + ", lastName=" + lastName + ", age=" + age + "]";
+        return "Persona [firstName=" + nombre + ", lastName=" + apellido + ", age=" + age + "]";
     }
 
     
