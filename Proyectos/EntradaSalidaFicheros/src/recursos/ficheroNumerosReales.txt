@@ -1,0 +1,5 @@
+12.5 4.0 100.7  67.7 40
+1.45 45.8 90.21 aa 24.01  //deja de sumar cuando encuentra aa
+
+
+7.21 10.14 33.5
