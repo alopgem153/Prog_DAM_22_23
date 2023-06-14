@@ -1,0 +1,16 @@
+==Gramatica==
+Carlos Ramirez:7.5
+Carlos Ramirez:7.5
+Marta Lopez:9.0
+Marta Lopez:9.0
+Sergio García:5.5
+Pedro Gomez:8.5
+Pedro Gomez:8.5
+==Ingles==
+Carlos Ramirez:8.0
+Carlos Ramirez:8.0
+Marta Lopez:9.5
+Marta Lopez:9.5
+Sergio García:9.0
+Pedro Gomez:9.1
+Pedro Gomez:9.1

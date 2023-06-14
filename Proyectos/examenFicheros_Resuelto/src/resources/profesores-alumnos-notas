@@ -1,0 +1,127 @@
+{
+  "profesores": [
+    {
+      "nombre": "Laura Gonzalez",
+      "codigo": "P003",
+      "especialidad": "Ingles",
+      "alumnos": [
+        {
+          "nombre": "Carlos Ramirez",
+          "dni": "98765432E",
+          "notas": {
+            "Ingles": 8.0,
+            "Gramatica": 7.5,
+            "Vocabulario": 9.0
+          }
+        },
+        {
+          "nombre": "Marta Lopez",
+          "dni": "54321678F",
+          "notas": {
+            "Ingles": 9.5,
+            "Gramatica": 9.0,
+            "Vocabulario": 8.5
+          }
+        },
+        {
+          "nombre": "Alfonso Lopez",
+          "dni": "",
+          "notas": {
+            "Ingles": 10.0,
+            "Gramatica": 10.0,
+            "Vocabulario": 8.5
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "David Torres",
+      "codigo": "P004",
+      "especialidad": "Biologia",
+      "alumnos": [
+        {
+          "nombre": "Ana Martínez",
+          "dni": "12345678G",
+          "notas": {
+            "Biologia": 7.0,
+            "Anatomia": 8.5,
+             "Ingles": 6.0,
+            "Gramatica": 6.5,
+            "Vocabulario": 6.0
+          }
+        },
+        {
+          "nombre": "Sergio García",
+          "dni": "87654321H",
+          "notas": {
+            "Biologia": 6.5,
+            "Anatomia": 7.0,
+             "Ingles": 9.0,
+            "Gramatica": 5.5,
+            "Vocabulario": 4.0
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "Juan Perez",
+      "codigo": "P001",
+      "especialidad": "Matematicas",
+      "alumnos": [
+        {
+          "nombre": "Maria López",
+          "dni": "12345678A",
+          "notas": {
+            "Matematicas": 9.5,
+            "Fisica": 8.0,
+            "Quimica": 7.5,
+            "Gramatica": 7.0,
+            "Vocabulario": 8.0
+          }
+        },
+        {
+          "nombre": "Pedro Gomez",
+          "dni": "87654321B",
+          "notas": {
+            "Matematicas": 7.0,
+            "Fisica": 6.5,
+            "Quimica": 8.0,
+             "Ingles": 9.1,
+            "Gramatica": 8.5,
+            "Vocabulario": 9.5
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "Ana Garcia",
+      "codigo": "P002",
+      "especialidad": "Historia",
+      "alumnos": [
+        {
+          "nombre": "Sofía Rodríguez",
+          "dni": "98765432C",
+          "notas": {
+            "Historia": 8.5,
+            "Geografia": 9.0,
+             "Ingles": 6.0,
+            "Gramatica": 4.5,
+            "Vocabulario": 3.0
+          }
+        },
+        {
+          "nombre": "Luisa Fernandez",
+          "dni": "54321678D",
+          "notas": {
+            "Historia": 7.0,
+            "Geografia": 6.5,
+             "Ingles": 7.5,
+            "Gramatica": 6.5,
+            "Vocabulario": 5.0
+            
+          }
+        }
+      ]
+    }
+  ]
+}

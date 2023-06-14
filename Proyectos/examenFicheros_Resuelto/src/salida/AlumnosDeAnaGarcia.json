@@ -1,0 +1,21 @@
+[ {
+  "nombre" : "Sofía Rodríguez",
+  "dni" : "98765432C",
+  "notas" : {
+    "Geografia" : 9.0,
+    "Gramatica" : 4.5,
+    "Vocabulario" : 3.0,
+    "Ingles" : 6.0,
+    "Historia" : 8.5
+  }
+}, {
+  "nombre" : "Luisa Fernandez",
+  "dni" : "54321678D",
+  "notas" : {
+    "Geografia" : 6.5,
+    "Gramatica" : 6.5,
+    "Vocabulario" : 5.0,
+    "Ingles" : 7.5,
+    "Historia" : 7.0
+  }
+} ]
